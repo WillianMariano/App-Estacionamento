@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="center">Pagamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="div1">
+    <ion-item class="item1">
+        <ion-label>Hora entrada:</ion-label>
+        <ion-input displayFormat="HH:mm" type="time" [(ngModel)]="inicio"></ion-input>
+        <ion-label>Hora saída:</ion-label>     
+        <ion-input displayFormat="HH:mm" type="time" [(ngModel)]="final"></ion-input>
+    </ion-item>
+    <ion-label>R$:{{service.valor}} Reais</ion-label>
+    <ion-button class="bt" color="success" expand="block" (click)="Valor()">Verificar valor</ion-button><br>
+    <ion-button class="bt" color="success" expand="block" (click)="Pagar()" [disabled]="service.valor==0">Pagamento</ion-button><br>
+    <ion-button class="bt" color="success"fill="outline" expand="block"  (click)="Return()">Voltar</ion-button>
+  </div>
+</ion-content>

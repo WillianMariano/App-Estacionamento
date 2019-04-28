@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+  <ion-toolbar color="success">
+    <ion-title class="center">Tickets Pagos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-list class="div1">  
+        <ion-card *ngFor="let item of pagos ">
+            <ion-card-header>
+              <ion-card-subtitle color="success"><h3>Código: {{item.codigo}}</h3></ion-card-subtitle>
+            </ion-card-header>    
+            <ion-card-content>
+                  <ion-row>Hora da Entrada: {{item.hrinicial}}</ion-row>
+                  <ion-row>Hora da Saida: {{item.hrfinal}}</ion-row>
+                  <ion-row>Valor: {{item.valor}}</ion-row>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>
